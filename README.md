@@ -53,5 +53,10 @@ Step Six:
   # config yourdomain.com-ssl.conf( SSLCertificateFile /etc/ssl/certs/, SSLCertificatePrivateKey /etc/ssl/private/, SSLCertificateBundle /etc/ssl/bundle)
   # apachectl -t
   # apachectl restart if Syntax OK
+  # Google blocked by default port 443,so run the command: sudo a2enmod ssl
+  # make the website http redirect to the https automatically: edit .htacess and add the following:
+  RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE] 
   
   
