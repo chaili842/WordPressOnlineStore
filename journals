@@ -1,0 +1,7 @@
+find certain specific string in files:
+#grep -iRl "See all products" ./
+./languages/shop-isle.pot
+./languages/fr_FR.mo
+./languages/fr_FR.po
+./inc/sections/shop_isle_products_section.php
+#sudo vi ./inc/sections/shop_isle_products_section.php
